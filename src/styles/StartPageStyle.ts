@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StartWrap = styled.div`
+export const Container = styled.div`
   position: relative;
   cursor: pointer;
 
@@ -12,10 +12,6 @@ export const StartWrap = styled.div`
     top: 5px;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  > img {
-    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   > h6 {

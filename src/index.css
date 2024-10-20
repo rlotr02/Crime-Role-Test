@@ -10,8 +10,8 @@
   --Icon: #877458;
   --White: #fff;
   --H1: 400 75px / normal New Rocker;
-  --H2: 400 30px / normal Yeon Sung;
-  --H3: 400 23px / normal Yeon Sung;
+  --H2: 400 26px / normal Yeon Sung;
+  --H3: 400 22px / normal Yeon Sung;
   --H4: 400 18px / normal Yeon Sung;
   --H5: 400 16px / normal Yeon Sung;
   --H6: 400 12px / normal Yeon Sung;
@@ -142,6 +142,7 @@ button:disabled {
 
 img {
   vertical-align: bottom;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 * {

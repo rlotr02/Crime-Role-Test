@@ -6,7 +6,7 @@ const StartPage = () => {
   const navigate = useNavigate();
 
   return (
-    <S.StartWrap onClick={() => navigate('/test')}>
+    <S.Container onClick={() => navigate('/test')}>
       <h1>START</h1>
       <div
         style={{
@@ -37,7 +37,7 @@ const StartPage = () => {
       >
         ⓒ 2024. rlotr02 All rights reserved.
       </h6>
-    </S.StartWrap>
+    </S.Container>
   );
 };
 
