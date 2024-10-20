@@ -1,7 +1,7 @@
 import * as S from '@styles/TestPageStyle';
 import TextButton from '@components/TextButton';
 import { useState } from 'react';
-import { Question } from '@/constants/Test';
+import { Question } from '@/constants/Question';
 import { useNavigate } from 'react-router-dom';
 
 const TestPage = () => {
