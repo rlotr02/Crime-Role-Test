@@ -1,7 +1,7 @@
-import Image1 from '/images/범인.png';
-import Image2 from '/images/탐정.png';
-import Image3 from '/images/형사.png';
-import Image4 from '/images/시민.png';
+import Image1 from '@images/result/범인.png';
+import Image2 from '@images/result/탐정.png';
+import Image3 from '@images/result/형사.png';
+import Image4 from '@images/result/시민.png';
 
 export const Result = [
   { type: '범인', image: Image1 },

@@ -30,19 +30,26 @@ const ShareKakao = ({
         objectType: 'feed',
         content: {
           title: '내가 범죄 스릴러 영화에 나온다면?',
-          description: '내가 범죄 스릴러 영화에 출연한다면 어떤 역할을 맡을까?',
+          description: `내 역할은 ${resultText}`,
           imageUrl: resultImageUrl,
           link: {
-            mobileWebUrl: 'https://crime-role-test.netlify.app',
-            webUrl: 'https://crime-role-test.netlify.app',
+            mobileWebUrl: resultUrl,
+            webUrl: resultUrl,
           },
         },
         buttons: [
           {
-            title: `내 역할은 ${resultText}`,
+            title: '자세히 보기',
             link: {
               mobileWebUrl: resultUrl,
               webUrl: resultUrl,
+            },
+          },
+          {
+            title: '테스트 하기',
+            link: {
+              mobileWebUrl: 'https://crime-role-test.netlify.app',
+              webUrl: 'https://crime-role-test.netlify.app',
             },
           },
         ],
