@@ -7,7 +7,7 @@ const StartPage = () => {
 
   return (
     <S.Container onClick={() => navigate('/test')}>
-      <h1>START</h1>
+      <S.StartText>START</S.StartText>
       <div
         style={{
           position: 'relative',
