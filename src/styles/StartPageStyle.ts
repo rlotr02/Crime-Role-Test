@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ $isLoad: boolean }>`
   position: relative;
   cursor: pointer;
 
@@ -12,6 +12,8 @@ export const Container = styled.div`
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
+    opacity: ${props => (props.$isLoad ? 1 : 0)};
+    transition: 0.8s ease-in-out;
   }
 `;
 
@@ -22,7 +24,7 @@ const colorChange = keyframes`
   75% { color: #853827; }
 `;
 
-export const StartText = styled.h1`
+export const StartText = styled.h1<{ $isLoad: boolean }>`
   font: var(--H1);
   position: absolute;
   z-index: 10;
@@ -30,4 +32,6 @@ export const StartText = styled.h1`
   left: 50%;
   transform: translateX(-50%);
   animation: ${colorChange} 5s infinite;
+  opacity: ${props => (props.$isLoad ? 1 : 0)};
+  transition: 0.8s ease-in-out;
 `;

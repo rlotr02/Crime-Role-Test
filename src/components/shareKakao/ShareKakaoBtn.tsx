@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ShareKakao from './ShareKakao';
+import IconButton from '../IconButton';
 
 const ShareKakaoBtn = ({
   text,
@@ -29,7 +30,9 @@ const ShareKakaoBtn = ({
     <div>
       {shareButton === true ? (
         <ShareKakao text={text} resultUrl={resultUrl} />
-      ) : null}
+      ) : (
+        <IconButton icon="kakao" />
+      )}
     </div>
   );
 };

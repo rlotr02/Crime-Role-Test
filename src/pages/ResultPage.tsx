@@ -2,9 +2,11 @@ import IconButton from '@/components/IconButton';
 import ShareKakaoBtn from '@/components/shareKakao/ShareKakaoBtn';
 import { Result } from '@/constants/Result';
 import * as S from '@styles/ResultPageStyle';
+import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const ResultPage = () => {
+  const [isLoad, setIsLoad] = useState(false);
   const navigate = useNavigate();
   const { key } = useParams();
   const resultUrl = decodeURI(`${window.location.href}`);
@@ -52,10 +54,13 @@ const ResultPage = () => {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            opacity: isLoad ? 1 : 0,
+            transition: 'opacity 0.8s ease-in-out',
           }}
+          onLoad={() => setIsLoad(true)}
         />
       </div>
-      <S.ButtonWrap>
+      <S.ButtonWrap $isLoad={isLoad}>
         <IconButton icon="link" onClick={handleClipBoard} />
         <ShareKakaoBtn text={text || ''} resultUrl={resultUrl} />
         <IconButton icon="save" onClick={handleSaveImage} />

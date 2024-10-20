@@ -1,13 +1,15 @@
 import * as S from '@styles/StartPageStyle';
 import StartImg from '@images/Start.png';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const StartPage = () => {
   const navigate = useNavigate();
+  const [isLoad, setIsLoad] = useState(false);
 
   return (
-    <S.Container onClick={() => navigate('/test')}>
-      <S.StartText>START</S.StartText>
+    <S.Container onClick={() => navigate('/test')} $isLoad={isLoad}>
+      <S.StartText $isLoad={isLoad}>START</S.StartText>
       <div
         style={{
           position: 'relative',
@@ -26,7 +28,10 @@ const StartPage = () => {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            opacity: isLoad ? 1 : 0,
+            transition: 'opacity 0.8s ease-in-out',
           }}
+          onLoad={() => setIsLoad(true)}
         />
       </div>
       <h6
