@@ -16,7 +16,7 @@ const ShareKakao = ({
   resultUrl: string;
 }) => {
   const resultText = text === '시민' ? '지나가는 시민1' : text;
-  const resultImageUrl = `https://crime-role-test.netlify.app/images/${text}.png`;
+  const resultImageUrl = `https://crime-role-test.netlify.app/images/${text}결과.png`;
 
   useEffect(() => {
     if (window.Kakao && !window.Kakao.isInitialized()) {
