@@ -1,6 +1,6 @@
 import * as S from '@styles/TestPageStyle';
 import TextButton from '@components/TextButton';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Question } from '@/constants/Question';
 import { useNavigate } from 'react-router-dom';
 
@@ -13,6 +13,11 @@ const TestPage = () => {
     형사: 0,
     시민: 0,
   });
+  const [isLoad, setIsLoad] = useState(false);
+
+  useEffect(() => {
+    setIsLoad(true);
+  }, []);
 
   // 답변 클릭 함수
   const onButtonClick = (type: string) => {
@@ -44,7 +49,12 @@ const TestPage = () => {
   };
 
   return (
-    <S.Container>
+    <S.Container
+      style={{
+        opacity: isLoad ? 1 : 0,
+        transition: 'opacity 0.8s ease-in-out',
+      }}
+    >
       <h2>{Question[index].id} / 7</h2>
       <h3>{Question[index].question}</h3>
       <S.AnswerWrap>
