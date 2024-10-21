@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 320px;
+
   > h2 {
     font: var(--H2);
     color: var(--Sub);
@@ -11,7 +13,7 @@ export const Container = styled.div`
     color: var(--Header);
     white-space: pre-wrap;
     margin-top: 9px;
-    margin-bottom: 25px;
+    height: 85px;
   }
 `;
 
